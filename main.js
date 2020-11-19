@@ -56,19 +56,17 @@ const markItemDone = function (e) {
 
 const editItem = function (e) {
 	document.querySelector('#btn-submit').textContent = 'Update';
-	const id = parseInt(e.target.id.split('-')[1]);
-	const item = document.getElementById(id);
 	op.value = "edit"
-	op.setAttribute('data-item_id', id);
-	itemName.value = item.querySelector('.text').textContent;
+	op.setAttribute('data-item_id', e.target.parentNode.id);
+	itemName.value = e.target.parentNode.querySelector('.text').textContent;
 	itemName.focus();
 }
 
 const deleteItem = function (e) {
-	const id = parseInt(e.target.id.split('-')[1]);
-	const item = document.getElementById(id);
+	// const id = parseInt(e.target.id.split('-')[1]);
+	const item = e.target.parentNode;
 	// if item is being edited then return
-	if (parseInt(op.getAttribute('data-item_id')) === id) {
+	if (parseInt(op.getAttribute('data-item_id')) === item.id) {
 		alert('Error! This item is being edited')
 		return;
 	};
