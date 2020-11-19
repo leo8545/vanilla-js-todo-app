@@ -1,0 +1,40 @@
+body {
+	max-width: 40em;
+	margin: 0 auto;
+}
+header {
+	background: #3b93ff;
+	color: #fff;
+	padding: 5px;
+	text-align: center;
+}
+footer {
+	background: #ddd;
+	text-align: center;
+	padding: 5px;
+	margin-top: 30px;
+}
+li {
+	margin: 5px 0;
+}
+a[id*="edit-"],
+a[id*="delete-"],
+a[id*="strike-"] {
+	padding-left: 5px;
+	color: #fff;
+	padding: 0 5px;
+	box-shadow: 1px 1px 3px -1px #000;
+	margin: 0 5px;
+	text-decoration: none;
+	text-decoration: none;
+	border-radius: 3px;
+}
+a[id*="edit-"] {
+	background: rgba(13, 121, 243, 0.973);
+}
+a[id*="delete-"] {
+	background: rgb(238, 61, 61);
+}
+a[id*="strike-"] {
+	background: rgb(1, 110, 28);
+}

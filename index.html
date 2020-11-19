@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo App</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Todo App</h1>
+	</header>
+	<main>
+		<div class="container">
+			<div id="items-wrapper">
+				<ul id="items"></ul>
+			</div>
+			<form id="add-form">
+				<label for="item-name">Name:
+					<input type="text" id="item-name">
+				</label>
+				<input type="hidden" id="op" value="add">
+				<button id="btn-submit">Add</button>
+			</form>
+			<button id="btn-reset">Reset</button>
+		</div>
+	</main>
+	<footer>
+		<p>A basic todo app built in Vanilla JavaScript</p>
+		<p>Developed by <a href="https://www.github.com/leo8545">Sharjeel Ahmad</a></p>
+	</footer>
+	<script src="main.js"></script>
+</body>
+</html>
