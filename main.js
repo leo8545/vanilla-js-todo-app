@@ -27,6 +27,7 @@ const submitForm = function (event) {
 		itemName.value=""
 		op.value = "add"
 		
+		li.classList.remove('edit-item')
 		op.setAttribute('data-item_id', '');
 		document.querySelector('#btn-submit').textContent = 'Add';
 	}
@@ -47,16 +48,19 @@ const markItemDone = function (e) {
 	if (!isDone) {
 		e.target.parentNode.querySelector('.text').style.cssText = 'text-decoration:line-through;color:#999;'
 		e.target.textContent = 'undone';
+		e.target.parentNode.classList.add('done-item');
 		e.target.setAttribute('data-done', 'yes');
 	} else {
 		e.target.parentNode.querySelector('.text').style.cssText = 'text-decoration:unset;color:unset;';
 		e.target.textContent = 'done';
+		e.target.parentNode.classList.remove('done-item');
 		e.target.setAttribute('data-done', 'no');
 	}
 }
 
 const editItem = function (e) {
 	document.querySelector('#btn-submit').textContent = 'Update';
+	e.target.parentNode.classList.add('edit-item');
 	op.value = "edit"
 	op.setAttribute('data-item_id', e.target.parentNode.id);
 	itemName.value = e.target.parentNode.querySelector('.text').textContent;

@@ -14,8 +14,22 @@ footer {
 	padding: 5px;
 	margin-top: 30px;
 }
+#items {
+	padding: 0;
+	list-style: none;
+}
 li {
 	margin: 5px 0;
+	background: #add8e6;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+li.done-item {
+	background: #dadedf;
+}
+li.edit-item {
+	background: #4dd3bd;
 }
 a[id*="edit-"],
 a[id*="delete-"],
@@ -49,5 +63,5 @@ a[id*="strike-"] {
 .date {
 	margin-left: 10px;
 	font-size: 0.8rem;
-	color: #999;
+	color: #3d3d3d;
 }
