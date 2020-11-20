@@ -1,5 +1,3 @@
 # Vanilla JS ToDo App
 
-Add, edit and delete items.
-
-All through vanilla JavaScript.
+Add, edit, delete, mark done items. All through Vanilla JavaScript.
