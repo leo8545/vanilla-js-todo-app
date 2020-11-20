@@ -38,3 +38,11 @@ a[id*="delete-"] {
 a[id*="strike-"] {
 	background: rgb(1, 110, 28);
 }
+#btn-reset {
+	margin: 10px 0;
+	background: #fff;
+	border: 1px solid rgb(214, 59, 59);
+	font-weight: 700;
+	color: rgb(214, 59, 59);
+	float: right;
+}
