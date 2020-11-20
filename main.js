@@ -34,7 +34,7 @@ const submitForm = function (event) {
 
 const resetItems = function (event) {
 	event.preventDefault();
-	window.confirm('Reset all items?') && (items.innerHTML = '');
+	items.innerHTML && window.confirm('Reset all items?') && (items.innerHTML = '');
 }
 
 document.querySelector('#btn-reset').addEventListener('click', resetItems);
@@ -63,10 +63,9 @@ const editItem = function (e) {
 }
 
 const deleteItem = function (e) {
-	// const id = parseInt(e.target.id.split('-')[1]);
 	const item = e.target.parentNode;
 	// if item is being edited then return
-	if (parseInt(op.getAttribute('data-item_id')) === item.id) {
+	if (parseInt(op.getAttribute('data-item_id')) === parseInt(item.id)) {
 		alert('Error! This item is being edited')
 		return;
 	};
