@@ -1,3 +1,7 @@
+:root {
+	--primary-blue: #3b93ff;
+}
+
 body {
 	max-width: 40em;
 	margin: 0 auto;
@@ -69,10 +73,28 @@ a[id*="strike-"] {
 	display: block;
 }
 #item-name {
-	width: 40em;
+	width: 100%;
 	min-height: 10em;
-	vertical-align: text-top;
+	display: block;
+	box-sizing: border-box;
+	margin: 5px 0;
 }
 #btn-submit {
-	vertical-align: bottom;
+	display: block;
+	margin: 10px 0;
+	background: var(--primary-blue);
+	border: none;
+	padding: 6px 20px;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+#btn-submit:hover {
+	opacity: 0.7;
+}
+#add-form {
+	border: 2px dashed #ddd;
+	padding: 10px;
+	background: #f9f9f9;
 }

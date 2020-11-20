@@ -110,3 +110,26 @@ const observer = new MutationObserver(callback);
 
 // Start observing the target node for configured mutations
 observer.observe(items, config);
+
+document.querySelector('#btn-image').addEventListener('click', e => {
+	e.preventDefault();
+	let link = window.prompt('Enter image url:');
+	link && (itemName.innerHTML += `<img src="${link}" />`);
+})
+
+document.querySelector('#btn-link').addEventListener('click', e => {
+	e.preventDefault();
+	let link = window.prompt('Enter url:');
+	link && (itemName.innerHTML += `<a href="${link}" target="_blank">${link}</a>`);
+})
+
+document.querySelector('#btn-yt-video').addEventListener('click', e => {
+	e.preventDefault();
+	let link = window.prompt('Enter url:');
+	function youtube_parser(url){
+		var regExp = /^https?\:\/\/(?:www\.youtube(?:\-nocookie)?\.com\/|m\.youtube\.com\/|youtube\.com\/)?(?:ytscreeningroom\?vi?=|youtu\.be\/|vi?\/|user\/.+\/u\/\w{1,2}\/|embed\/|watch\?(?:.*\&)?vi?=|\&vi?=|\?(?:.*\&)?vi?=)([^#\&\?\n\/<>"']*)/i;
+		var match = url.match(regExp);
+		return (match && match[1].length==11)? match[1] : false;
+	}
+	link && (itemName.innerHTML += `<iframe width="560" height="315" src="https://www.youtube.com/embed/${youtube_parser(link)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
+})
