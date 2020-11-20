@@ -15,8 +15,8 @@ const submitForm = function (event) {
 		// create li
 		const li = document.createElement('li');
 		li.id = Date.now();
-		const date = new Date().toJSON();
-		li.innerHTML = `<span class="text">${itemName.value}</span><span class="date">${date.slice(0,10) + ' ' + date.slice(11,16)}</span>`;
+		const date = (new Date).toString();
+		li.innerHTML = `<span class="text">${itemName.value}</span><span class="date">Posted at: ${date.slice(15,24) + ' on ' +date.slice(4,15)}</span>`;
 		
 		li.innerHTML += `<a href="#" id="strike-${li.id}" class="btn-strike" data-done="no">done</a><a href="#" id="edit-${li.id}" class="btn-edit">edit</a><a href="#" id="delete-${li.id}" class="btn-delete">delete</a>`;
 		items.appendChild(li);
