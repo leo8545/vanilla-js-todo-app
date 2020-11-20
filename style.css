@@ -46,3 +46,8 @@ a[id*="strike-"] {
 	color: rgb(214, 59, 59);
 	float: right;
 }
+.date {
+	margin-left: 10px;
+	font-size: 0.8rem;
+	color: #999;
+}
