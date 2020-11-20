@@ -1,5 +1,5 @@
 const addForm = document.querySelector('#add-form')
-const itemName = document.querySelector('input#item-name');
+const itemName = document.querySelector('#item-name');
 const items = document.querySelector('#items');
 const op = document.querySelector('#op');
 

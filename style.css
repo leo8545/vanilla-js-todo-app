@@ -12,7 +12,7 @@ footer {
 	background: #ddd;
 	text-align: center;
 	padding: 5px;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 #items {
 	padding: 0;
@@ -53,15 +53,26 @@ a[id*="strike-"] {
 	background: rgb(1, 110, 28);
 }
 #btn-reset {
-	margin: 10px 0;
+	margin: 30px 0 10px;
 	background: #fff;
 	border: 1px solid rgb(214, 59, 59);
 	font-weight: 700;
 	color: rgb(214, 59, 59);
-	float: right;
 }
 .date {
-	margin-left: 10px;
+	margin-top: 10px;
 	font-size: 0.8rem;
 	color: #3d3d3d;
+	display: inline-block;
+}
+.text {
+	display: block;
+}
+#item-name {
+	width: 40em;
+	min-height: 10em;
+	vertical-align: text-top;
+}
+#btn-submit {
+	vertical-align: bottom;
 }
